@@ -1,0 +1,250 @@
+﻿body
+{
+    background-color:  #02010a;
+    font-family: 'Dancing Script', cursive;
+}
+
+header{
+    background-color: #5b7989;
+    border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    animation:miAnimacion 2s;
+}
+
+h1{
+        padding-left: 1%;
+        text-align:left;
+        color:white;
+        text-shadow:1px 2px 3px #02010a;
+        width: 100%;
+}
+
+nav {
+        padding-top: 30px;
+        padding-right: 1%;
+        width: 100%;
+}
+
+#contenido #imagen_central{
+    width: 100%;
+    background-color: #82c3a6;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none; 
+    width: 40%;
+}
+
+nav li {
+    display: inline; 
+    margin-left: 10px;
+}
+
+nav ul li a{
+    text-decoration:underline;    
+    color: white;
+}
+
+nav ul li a:hover {
+    text-shadow: none !important;
+    background-color: hsla(200, 60%, 50%, 0.65);
+    border-radius: 5px 6px;
+}
+
+.imagen{
+    -webkit-filter:drop-shadow(2px 2px 2px #02010a);
+    filter:drop-shadow(2px 2px 2px #02010a);
+    margin: 0 auto;
+    width: 80%;
+    padding: 2.5% 10% 2.5% 10%;
+}
+
+.enlace{
+     text-align:center;
+}
+
+#contenido #imagen_secundadaria{
+    width: 100%;
+    background-color: #d5c75f;
+    border-width: 1px;
+    margin: 0 auto;
+}
+
+#imagen1 img:hover{
+    transform:rotate(10deg);
+    -webkit-filter:drop-shadow(2px 2px 2px #82c3a6);
+    filter:drop-shadow(2px 2px 2px #82c3a6);
+    border-width: 2px;
+}
+
+div[id*="imagen"] img{
+    transition: transform 1s;
+}
+
+#imagen2 img:hover{
+    transform:translate(20px, -5px);
+    -webkit-filter:drop-shadow(2px 2px 2px #82c3a6);
+    filter:drop-shadow(2px 2px 2px #82c3a6);
+    border-width: 2px;
+}
+
+footer {
+    background-color: #C6d5c5;
+    border-radius: 0px 0px 10px 10px;
+    -moz-border-radius: 0px 0px 10px 10px;
+    -webkit-border-radius: 0px 0px 10px 10px;
+}
+
+.titulo{
+    font-size: 2em;
+    font-weight:bold;
+    text-align:left;
+    padding-left: 5px;
+}
+
+.simple{
+    text-align:left;
+    padding-left: 5px;
+}
+
+
+
+@media all and (min-width:900px) {
+    #contenido {
+        width: 900px;
+        margin: 0 auto;
+    }
+
+    header #titulo{
+        flex: 1 1 50%;
+    }
+
+    header #cmenu{        
+        flex: 1 1 50%;
+    }
+
+    h1{
+        text-align: left;
+        padding: 4px;
+    }
+
+    nav ul {
+        float:right;
+    }
+
+    #contenido #imagen_secundadaria{
+        display: flex;
+    }
+
+    #imagen1 {
+        width: 50%;
+    }
+
+    #imagen2 {
+        width: 50%;
+    }
+
+    #contenido footer{
+        display: flex;
+    }
+
+    .infooter {
+        width: 25%;
+    }
+
+    /* Estilos de retratos y paisajes*/
+   #galeria {
+        display: flex;
+        width: 100%;
+        flex-flow:row;
+        flex-wrap:wrap;
+        background-color: #d5c75f;
+    }
+
+   div[id*="bloque"]{
+       flex: 1 1 30%;
+   }
+
+}
+
+@media all and (max-width:900px) {
+    #contenido{
+        width: 100%;
+    }
+
+    header #titulo{
+        flex: 1 1 100%;
+    }
+
+    header #cmenu{        
+        flex: 1 1 100%;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    nav ul {
+        margin: 0 auto;
+    }
+
+    #imagen1 {
+        width: 100%;
+        order: 1;
+    }
+
+    #imagen2 {
+        width: 100%;
+        order: 2;
+    }
+
+     .infooter {
+        width: 100%;
+    }
+     /* Estilos de retratos y paisajes*/
+    #galeria {
+        display: flex;
+        width: 100%;
+        flex-flow:column;
+        flex-wrap:nowrap;
+        background-color: #d5c75f;
+    }
+
+    div[id*="bloque"]{
+       flex: 1 1 100%;
+   }
+}
+
+.imagen[id="img_uno"]{
+    -webkit-filter:blur(10px);
+}
+
+.imagen[id^="img_par"]{
+    -webkit-filter:grayscale(100%);
+}
+
+.imagen[id="img_tres"]{
+    -webkit-filter:sepia(90%);
+}
+
+@-webkit-keyframes miAnimacion{
+    0%{
+        margin-top:150%;
+    }
+    60%{
+        margin-top:-5%;
+    }
+    100%{
+        margin-top:0%;
+    }
+}
+
+
+
+
+
